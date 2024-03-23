@@ -1,9 +1,8 @@
 const {Router} = require('express');
+const { getAllStudent } = require('../controller/studentController');
 
 const router = Router();
 
-router.get('/',(req,res)=>{
-    res.send('using api route')
-});
+router.get('/',getAllStudent);
 
 module.exports = router;
